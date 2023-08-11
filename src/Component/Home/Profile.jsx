@@ -7,16 +7,16 @@ function Profile() {
       <div className="profile-parent">
         <div className="profile-details">
           <div className="colz">
-            <a href="https://web.facebook.com/profile.php?id=100089760934929" target="_blank" rel="noopener"> 
+            <a href="https://web.facebook.com/profile.php?id=100089760934929"> 
               <i className="fa fa-facebook-square" />
             </a>
-            <a href="https://www.instagram.com/alinmolayanjohn/" target="_blank" rel="noopener">
+            <a href="https://www.instagram.com/alinmolayanjohn/">
               <i class="bi bi-instagram" />
             </a>
-            <a href="https://twitter.com/johnayomide50" target="_blank" rel="noopener">
+            <a href="https://twitter.com/johnayomide50">
               <i className="fa fa-twitter-square" />
             </a>
-            <a href="https://www.linkedin.com/in/john-tech-742782275/" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/john-tech-742782275/">
               <i class="bi bi-linkedin" />
             </a>
           </div>
