@@ -1,8 +1,9 @@
 import React from 'react'
 import Typical from 'react-typical'
+import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 function Home() {
   return (
-       <div>
+       <div id='Home'>
           <h1 className='text-[35px] font-medium md:text-[30px] ml-14' >Hello,</h1>
        <div className='flex'>
          <h1 className='text-[35px] font-medium md: ml-14 whitespace-normal mr-2'>I am a</h1>
@@ -36,9 +37,9 @@ function Home() {
          <button className='hover:z-50 transition-all duration-300 ease-in-out hover:scale-125 bg-purple-600 p-2 rounded-md text-white'>Hire me</button>
       </a>
       </div>
-      <div className='bg'>
+      {/* <div className='bg'>
          <img className='bg' src='homeImage.png' />
-      </div>
+      </div> */}
     </div>
     
   )
