@@ -1,7 +1,10 @@
-import React from 'react'
-import { AiOutlineMenu } from 'react-icons/ai'
+import React, { useState } from 'react'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
 function Nav() {
+  const [toggle, setToggle] = useState(false);
+
+  
   return (
     // <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4'>
     //  <img src='logo.png' className='h-32' />
@@ -28,14 +31,33 @@ function Nav() {
     <div>
         <div  className='flex justify-between'>
             <img src='logo.png' className='h-28' />
+            <div className='flex md:hidden mr-2 p-[28px] h-6'>
             <div>
+              {!toggle?
+            <AiOutlineMenu onClick={()=>setToggle(true)} />
+                 :
+            <AiOutlineClose onClick={()=>setToggle(false)} /> 
+              }
+              {toggle?
+                   <ul className='fixed right-0 top-0 w-[60%] bg-white mt-16'>
+                   <li className='mr-2 transition-all ease-in-out hover:scale-110 p-6'>Home</li>
+                   <li className='mr-2 transition-all ease-in-out hover:scale-110 p-4'>About me</li>
+                   <li className='mr-2 transition-all ease-in-out hover:scale-110 p-4'>Skills</li>
+                   <li className='mr-2 transition-all ease-in-out hover:scale-110 p-4'>Portfolio</li>
+                   <li className='mr-2 transition-all ease-in-out hover:scale-110 p-4'>Companies</li>
+                   <li className='mr-2 transition-all ease-in-out hover:scale-110 p-4'>Contact us</li>
+               </ul>
+              :null}
+            </div>
+            </div>
+            <div className='hidden md:flex'>
                 <ul className='flex flex-row'>
-                    <li className='mr-4 transition-all ease-in-out hover:scale-110'>Home</li>
-                    <li className='mr-4 transition-all ease-in-out hover:scale-110'>About me</li>
-                    <li className='mr-4 transition-all ease-in-out hover:scale-110'>Skills</li>
-                    <li className='mr-4 transition-all ease-in-out hover:scale-110'>Portfolio</li>
-                    <li className='mr-4 transition-all ease-in-out hover:scale-110'>Companies</li>
-                    <li className='mr-4 transition-all ease-in-out hover:scale-110'>Contact us</li>
+                    <li className='mr-2 transition-all ease-in-out hover:scale-110 p-4'>Home</li>
+                    <li className='mr-2 transition-all ease-in-out hover:scale-110 p-4'>About me</li>
+                    <li className='mr-2 transition-all ease-in-out hover:scale-110 p-4'>Skills</li>
+                    <li className='mr-2 transition-all ease-in-out hover:scale-110 p-4'>Portfolio</li>
+                    <li className='mr-2 transition-all ease-in-out hover:scale-110 p-4'>Companies</li>
+                    <li className='mr-2 transition-all ease-in-out hover:scale-110 p-4'>Contact us</li>
                 </ul>
             </div>
         </div>
